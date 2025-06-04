@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from './_components/navbar/navbar.component';
 import { BaseUiComponent } from "./_components/base-ui/base-ui.component";
-import { CertificadosComponent } from "./pages/certificados/certificados.component";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [NavbarComponent, BaseUiComponent, CertificadosComponent],
+  imports: [NavbarComponent, BaseUiComponent, RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
