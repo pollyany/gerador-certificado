@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { ItemCertificadoComponent } from "../../_components/item-certificado/item-certificado.component";
+import { Certificado } from '../../interfaces/certificado';
+import { CertificadoService } from '../../_services/certificado.service';
 
 @Component({
   selector: 'app-certificados',
@@ -8,6 +10,13 @@ import { ItemCertificadoComponent } from "../../_components/item-certificado/ite
   templateUrl: './certificados.component.html',
   styleUrl: './certificados.component.css'
 })
-export class CertificadosComponent {
+export class CertificadosComponent implements OnInit {
+  certificados: Certificado[] = [];
 
+  constructor(private CertificadoService: CertificadoService) {}
+
+  ngOnInit(): void {
+    this.certificados = this.CertificadoService.certificados;
+    console.log(this.certificados);
+  }
 }
