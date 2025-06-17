@@ -3,10 +3,11 @@ import { Component, OnInit } from '@angular/core';
 import { ItemCertificadoComponent } from "../../_components/item-certificado/item-certificado.component";
 import { Certificado } from '../../interfaces/certificado';
 import { CertificadoService } from '../../_services/certificado.service';
+import { SecondaryButtonComponent } from "../../_components/secondary-button/secondary-button.component";
 
 @Component({
   selector: 'app-certificados',
-  imports: [ItemCertificadoComponent],
+  imports: [ItemCertificadoComponent, SecondaryButtonComponent],
   templateUrl: './certificados.component.html',
   styleUrl: './certificados.component.css'
 })
