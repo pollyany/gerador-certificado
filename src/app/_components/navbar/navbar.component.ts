@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
@@ -9,13 +9,6 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './navbar.component.css',
 })
 
-export class NavbarComponent implements OnInit {
-rlaListaCertificado: any;
-  ngOnInit(): void {
-    this.mensagem();
-  }
+export class NavbarComponent {
 
-  mensagem() {
-    console.log('componente inicializou');
-  }
 }
